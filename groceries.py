@@ -27,6 +27,16 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+#Separating details
+
+class products:
+    def __init__(name, price):
+        self.name = name
+        self.price = price
+
+#Printing list in alphabetical order
+#products.sort('name')
+
 #Printing list in a new line
 print(*products, sep = "\n")
 
