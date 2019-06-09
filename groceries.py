@@ -30,24 +30,28 @@ products = [
 
 products_count = len(products)
 
-#Introduction
+#Introduction words of the program
 print("---------------")
 print("There are " + str(products_count) + " products:")
 print("---------------")
 
 #Sorting correctly:
 
-products2 = sorted(products, key=operator.itemgetter('name'))
+sorted_products = sorted(products, key=operator.itemgetter('name'))
 
+##-------------------------------------------------------------##
+# Alternatively, you can use
+# def sort_by_name(anyproduct):
+#     return any_product["name"]
+
+# sorted_products =  sorted(products, key=sort_by_name)
+
+##-------------------------------------------------------------##
 
 #Separating details
-for p in products2:
+for p in sorted_products:
     price_usd = "{0:.2f}".format(p["price"])
     print("+ " + p["name"] + "($" + str(price_usd) + ")")
-
-
-
-
 
 # Checkpoint 2 - Printing Departments
 # Print the number of unique departments.
