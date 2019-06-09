@@ -68,3 +68,16 @@ print(" ")
 print("---------------")
 print("There are " + str(department_count) + " departments:")
 print("---------------")
+
+
+# PRINT EACH DEPARTMENT (SORTED)
+unique_departments.sort()
+
+for d in unique_departments:
+    department_products =  [p for p in products if p["department"] == d]
+    department_products_count = len(department_products)
+    if department_products_count > 1:
+        label = "products"
+    else:
+        label = "product"
+    print("+ " + d.title() + " (" + str(department_products_count) + " " + label + ")")
