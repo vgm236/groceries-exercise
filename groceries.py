@@ -37,8 +37,9 @@ print("---------------")
 #Separating details
 
 for p in products:
-    print("+ " + p["name"])
-
+    # if needed use -- price_usd = p["price"] 
+    price_usd = "{0:.2f}".format(p["price"])
+    print("+ " + p["name"] + "($" + str(price_usd) + ")")
 
 
 
