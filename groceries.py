@@ -1,6 +1,7 @@
 # groceries.py
 
 import pprint
+import operator
 
 # Print all products (already done for you! 😺).
 
@@ -34,33 +35,16 @@ print("---------------")
 print("There are " + str(products_count) + " products:")
 print("---------------")
 
-#Separating details
+#Sorting correctly:
 
-for p in products:
-    # if needed use -- price_usd = p["price"] 
+products2 = sorted(products, key=operator.itemgetter('name'))
+
+
+#Separating details
+for p in products2:
     price_usd = "{0:.2f}".format(p["price"])
     print("+ " + p["name"] + "($" + str(price_usd) + ")")
 
-
-
-
-#for name in products:
-    #print(*name, sep = "\n")
-
-#Printing list in a new line
-#print(*products, sep = "\n")
-
-#Printing list in alphabetical order
-
-
-
-# Print the number of products.
-# Print the first product.
-# Print the name of the first product.
-# Print the name of each product.
-# Print in alphabetical order the name of each product.
-# Print in alphabetical order the name and price of each product.
-# Print in alphabetical order the name and price of each product, where the price is rounded to two decimal places.
 
 
 
