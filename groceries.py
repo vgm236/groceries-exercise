@@ -3,7 +3,7 @@
 import pprint
 import operator
 
-# Print all products (already done for you! 😺).
+# PRINTING ALL PRODUCTS
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -30,12 +30,12 @@ products = [
 
 products_count = len(products)
 
-#Introduction words of the program
+# INTRODUCTION WORDS TO THE PROGRAM
 print("---------------")
 print("There are " + str(products_count) + " products:")
 print("---------------")
 
-#Sorting correctly:
+# SORTING CORRECTLY
 
 sorted_products = sorted(products, key=operator.itemgetter('name'))
 
@@ -48,14 +48,23 @@ sorted_products = sorted(products, key=operator.itemgetter('name'))
 
 ##-------------------------------------------------------------##
 
-#Separating details
+# SEPARATING DETAILS
 for p in sorted_products:
     price_usd = "{0:.2f}".format(p["price"])
     print("+ " + p["name"] + "($" + str(price_usd) + ")")
 
-# Checkpoint 2 - Printing Departments
-# Print the number of unique departments.
-# Print the name of each unique department.
-# Print in alphabetical order the name of each unique department.
-# Print in alphabetical order the name of each unique department, as well as the number of products associated with that department.
-# Print in alphabetical order the name of each unique department, as well as the number of products associated with that department, and properly differentiate between "products" plural and "product" singular, depending on how many there are.
+# PRINTING DEPARTMENTS
+
+# CREATE NEW LIST - FILTERING
+departments =  []
+for p in products:
+    departments.append(p["department"])
+
+unique_departments = list(set(departments))
+department_count = len(unique_departments)
+
+# PRINT NUMBER OF DEPARMENTS
+print(" ")
+print("---------------")
+print("There are " + str(department_count) + " departments:")
+print("---------------")
