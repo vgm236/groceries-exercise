@@ -63,6 +63,16 @@ for p in sorted_products:
     price_usd = "{0:.2f}".format(p["price"])
     print("+ " + p["name"] + "($" + str(price_usd) + ")")
 
+# Alternatively, you can use
+# 
+# def to_usd(my_price):
+#     return "${0:,.2f}".format(my_price)  
+# 
+# price_usd = to_usd()
+# print(f"{item['name']} ... {price_usd}")
+
+##-------------------------------------------------------------##
+
 # PRINTING DEPARTMENTS
 
 # CREATE NEW LIST - FILTERING
