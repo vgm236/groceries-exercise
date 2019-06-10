@@ -28,12 +28,22 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+# COUNT HOW MANY ARE INSIDE
+
 products_count = len(products)
 
 # INTRODUCTION WORDS TO THE PROGRAM
 print("---------------")
 print("There are " + str(products_count) + " products:")
 print("---------------")
+
+##-------------------------------------------------------------##
+# Alternatively, you can use (String concatenation)
+
+#print(f"There are {products_count} products:")
+
+##-------------------------------------------------------------##
+
 
 # SORTING CORRECTLY
 
