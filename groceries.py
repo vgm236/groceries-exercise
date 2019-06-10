@@ -1,7 +1,7 @@
 # groceries.py
 
-import pprint
-import operator
+import pprint   # pretty print data structures
+import operator # helps to sort correctly
 
 # PRINTING ALL PRODUCTS
 
